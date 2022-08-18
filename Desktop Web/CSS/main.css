@@ -1,0 +1,396 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: "Inter-bold";
+  src: url("Inter-Bold.ttf");
+}
+
+/*estilos de body*/
+
+body {
+  background-color:rgb(240, 235, 227) ;
+  font-family: "Inter", medium;
+  font-size: 0.8rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  background-color: rgb(189, 223, 232);
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  column-gap: 10px;
+}
+
+header nav ul li {
+  list-style: none;
+  background-color: rgb(220, 210, 210);
+  padding: 5px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.img-parent {
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "banner banner"
+    "about-us-left about-us-right"
+    "services services"
+    ". ."
+    ". ."
+    "portfolio-left portfolio-right";
+  justify-content: center;
+  justify-items: center;
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.about-us-left {
+  grid-area: about-us-left;
+}
+
+.about-us-right {
+  grid-area: about-us-right;
+  margin-top: 2rem;
+}
+
+.portfolio-left {
+  grid-area: portfolio-left;
+}
+
+.portfolio-right {
+  grid-area: portfolio-right;
+}
+
+.services {
+  grid-area: services;
+}
+
+.about-us-title,
+.portfolio-title {
+  margin-bottom: 1rem;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-item > h4 {
+  margin-bottom: 1rem;
+}
+
+.current-li {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  color:rgb(87, 111, 114);
+  font-size: 60 px;
+  text-decoration: underline;
+  margin-top: 16px;
+  margin-bottom: 2rem;
+}
+
+.text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.caja {
+  border: 3px solid black;
+  width: 230px;
+  margin-bottom: 64px;
+  padding: 8px;
+
+  background-image: url(../Img/light-blue.webp);
+  display: inline-block;
+}
+
+.bold {
+  font-family: "Inter-Bold";
+}
+
+.item-absolute {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 60px;
+}
+
+.item-fixed {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.services-table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+.contact-form {
+  text-align: center;
+  margin: auto;
+  margin-top: 16px;
+
+  background-color: lightgray;
+  border: 3px solid darkgray;
+  padding: 1rem;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.submit {
+  margin-top: 24px;
+}
+
+.kate-adams-img {
+  width: 70%;
+}
+
+.about-us-main {
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(172, 199, 198);
+  padding: 1rem;
+  border: 5px solid rgb(143, 173, 172);
+}
+
+.img-parent {
+  margin-bottom: 1rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(8, auto);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-areas:
+    "corporate corporate"
+    ". ."
+    "residential residential"
+    ". ."
+    "commercial commercial"
+    ". ."
+    "organization organization"
+    ". .";
+}
+
+.corporate {
+  grid-area: corporate;
+}
+.residential {
+  grid-area: residential;
+}
+.commercial {
+  grid-area: commercial;
+}
+.organization {
+  grid-area: organization;
+}
+
+.youtube-iframe {
+  width: 120px;
+  height: 120px;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
+
+.subdiv-contact-form > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.subdiv-contact-form > input {
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.subtitle{
+  color: rgb(125, 157, 156)
+ }
+
+@media screen and (min-width: 768px) {
+  .banner > img {
+    width: 700px;
+    height: 150px;
+  }
+
+  .main-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "banner banner banner banner"
+      "about-us-left about-us-right about-us-right about-us-right"
+      "services services services services"
+      ". . . ."
+      "portfolio-left portfolio-left portfolio-left portfolio-right";
+  }
+
+  .about-us-main {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas:
+      "corporate corporate corporate"
+      ". . ."
+      "residential residential residential"
+      ". . ."
+      "commercial commercial commercial"
+      ". . ."
+      "organization organization organization"
+      ". . .";
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+
+  .hidden-on-mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+  main {
+    padding: 2rem;
+  }
+
+  header {
+    flex-direction: row;
+    justify-items: center;
+    padding: 0 2rem;
+    padding-top: 0.5rem;
+  }
+  header > h1 {
+    flex: 1;
+  }
+  .current-li {
+    display: inline-block;
+  }
+
+  .banner > img {
+    width: 1000px;
+    height: 150px;
+  }
+
+  .service-item > img {
+    width: 200px;
+  }
+
+  .portfolio-right > img {
+    width: 150px;
+  }
+
+  .about-us-main {
+    flex-direction: row;
+  }
+
+  .about-us-intro {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .kate-intro {
+    flex: 0 100%;
+  }
+
+  .img-parent {
+    margin-bottom: 0;
+    flex-basis: fit-content;
+  }
+
+  .youtube-iframe {
+    width: auto;
+    height: auto;
+  }
+
+
+
+
+
+  .subdiv-contact-form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-form {
+    width: 50%;
+  }
+
+  .width-navbrand{
+    width: 100%;
+  }
+
+  .navbar-brand{
+    color:rgb(87, 111, 114) ;
+  }
+
+
+
+}
